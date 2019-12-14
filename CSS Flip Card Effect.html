@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8" name="viewport" content="width=device, initial-scale=1">
+
+  <title>CSS Flip Card</title>
+
+    <style>
+      .maincontainer{
+        position: relative;
+        width: 250px;
+        height: 320px;
+        background: green;
+      }
+
+      .thecard{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease;
+        /* background: yellow; */
+      }
+
+      .thecard:hover{
+        transform: rotateY(180deg);
+      }
+
+      .thefront{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background:#ffc728;
+      color: #333;
+      text-align: center;
+      font-family: 'zilla slab', sans-serif;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      }
+
+      .theback{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background:#5fcf80;
+      color: #fff;
+      text-align: center;
+      font-family: 'zilla slab', sans-serif;
+      border-radius: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      transform: rotateY(180deg);
+
+      }
+    </style>
+
+</head>
+
+<body>
+
+  <div class="maincontainer">
+
+  <div class="thecard">
+
+  <div class="thefront">Front of Card<p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
+
+
+  <div class="theback">Back of Card<p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p><button>Submit</button></div>
+
+  </div>
+
+</body>
+
+</html>

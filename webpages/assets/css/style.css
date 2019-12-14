@@ -1,0 +1,52 @@
+.container {
+    min-width: 800px;
+    margin: 8px 8px;
+}
+
+.input-field {
+color: white;
+
+
+}
+
+table {
+   color: white;
+   background: blue;
+   opacity: 40%;
+}
+
+
+body {
+       background: url('thumbsup.gif') repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+       opacity: 20% ;
+  }
+
+  .card-panel {
+   color: goldenrod;
+
+   border-collapse: separate;
+   border-spacing: 6px;
+}
+
+.jumbotron {
+   background: url('weirdtrain.jpg') no-repeat center center;
+   border: 2px red;
+   font-size: 200px;
+   color: goldenrod;
+   font-family: Anton, Georgia, 'Times New Roman', Times, serif
+
+
+
+
+
+
+}
+
+.center-align {
+
+   align-content: centerS
+}

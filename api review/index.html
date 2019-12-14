@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+ <meta charset="utf-8">
+ <title>Weather API</title>
+</head>
+​
+<body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+ <div id="city"></div>
+
+ <div id="temp"></div>
+
+ <div id="temp"></div>
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+  // Example queryURL for Giphy API
+  var apiKey ="b4731f8203a4f7dbc07ff5dc21e670e9";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=78726,us&APPID=" + apiKey;
+
+  $.ajax({
+   url: queryURL,
+   method: "GET"
+  }).then(function(response) {
+   console.log(response);
+   console.log(response.main.temp)
+// Create tag for city name
+    var convertKtoF = (response.main.temp - 273.15) * 9/5 + 32;
+
+    var cityName = $("<h1>").text(response.name);
+    var temp = $("<p>").text(convertKtoF.toFixed(1) + " degree F");
+    $("#city").append(cityName);
+    $("#temp").append(temp);
+});
+  
+ </script>
+​
+</body>
+​
+</html>
